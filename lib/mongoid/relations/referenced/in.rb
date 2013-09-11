@@ -142,6 +142,10 @@ module Mongoid
             end
           end
 
+          def eager_load_klass
+            Relations::Eager::BelongsTo
+          end
+
           # Returns true if the relation is an embedded one. In this case
           # always false.
           #
