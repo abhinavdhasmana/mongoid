@@ -100,13 +100,10 @@ describe Mongoid::Relations::Eager do
 
       let(:includes) { [:agents] }
 
-      it "" do
-#        p account
-        p agent
-
+      it "preloads" do
         expect(doc.ivar(:agents)).to be_false
         context.preload(Account, inclusions, [doc])
-
+        ## TODO
         p doc.ivar(:agents)
       end
 
